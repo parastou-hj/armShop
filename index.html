@@ -19,15 +19,15 @@
             <div class="col-lg-10">
                  <div class="top-header py-2">
                 <div class="container-fluid">
-                    <div class="top-header-content">
+                    <div class="top-header-content position-relative">
                          <!-- Left Side -->
-                        <div class="top-left">
-                             <div class="categories-menu">
-                               <img src="./images/category.png" alt="">
-                                <span>دسته بندی محصولات</span>
-                                <img src="./images/flesh-down.png" alt="">
-                            </div>
+                        <nav class=" top-left position-relative">
                             <ul class="top-menu">
+                                <li class="categories-menu has-megamenu" data-megamenu-target="#all-category">
+                                    <img src="./images/category.png" alt="">
+                                    <span>دسته بندی محصولات</span>
+                                    <img src="./images/flesh-down.png" alt="">
+                                </li>
                                 <li><a href="#">درباره ما</a></li>
                                  <li><a href="#">کاتالوگ</a></li>
                                  <li><a href="#">تماس با ما</a></li>
@@ -35,8 +35,111 @@
                                 <li><a href="#">سوالات متداول</a></li>
 
                             </ul>
+
+                            <div id="all-category" class="mega-menu">
+                                <div class="pro-menu px-0">
+                                    <div class="pro-tabs">
+                                    <div class="p-tab" data-tab="kitchen">
+                                        <div><i class="fa-solid fa-blender fa-fw"></i><span>آشپزخانه</span></div>
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </div>
+                                    <div class="p-tab" data-tab="cleaning">
+                                        <div><i class="fa-solid fa-broom fa-fw"></i><span>نظافت و شست‌وشو</span></div>
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </div>
+                                    <div class="p-tab" data-tab="accessories">
+                                        <div><i class="fa-solid fa-plug-circle-bolt fa-fw"></i><span>لوازم جانبی</span></div>
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </div>
+                                    <div class="p-tab" data-tab="climate">
+                                        <div><i class="fa-solid fa-fan fa-fw"></i><span>تهویه و گرمایش</span></div>
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </div>
+                                    <div class="p-tab" data-tab="personal-care">
+                                        <div><i class="fa-solid fa-hands-bubbles fa-fw"></i><span>بهداشت و مراقبت شخصی</span></div>
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </div>
+                                    </div>
+
+                                    <div class="pro-contents">
+                                    <div class="p-content" id="kitchen">
+                                        <a href="#"><i class="fa-solid fa-chevron-left"></i><span>همه محصولات آشپزخانه</span></a>
+                                        <div class="sub-menus row">
+                                        <div class="sub-menu col-md-6 mb-3">
+                                            <a href="#">پخت و پز</a>
+                                            <div class="sub-menu-items">
+                                            <div class="s-b-item"><a href="#">مایکروویو</a></div>
+                                            <div class="s-b-item"><a href="#">سرخ‌کن</a></div>
+                                            <div class="s-b-item"><a href="#">آون توستر</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="sub-menu col-md-6 mb-3">
+                                            <a href="#">تهیه نوشیدنی</a>
+                                            <div class="sub-menu-items">
+                                            <div class="s-b-item"><a href="#">چای‌ساز</a></div>
+                                            <div class="s-b-item"><a href="#">قهوه‌ساز</a></div>
+                                            <div class="s-b-item"><a href="#">کتری برقی</a></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-content" id="cleaning">
+                                        <a href="#"><i class="fa-solid fa-chevron-left"></i><span>همه وسایل نظافت و شست‌وشو</span></a>
+                                        <div class="sub-menus row">
+                                        <div class="sub-menu col-md-6 mb-3">
+                                            <a href="#">نظافت منزل</a>
+                                            <div class="sub-menu-items">
+                                            <div class="s-b-item"><a href="#">جاروبرقی</a></div>
+                                            <div class="s-b-item"><a href="#">جارو شارژی</a></div>
+                                            <div class="s-b-item"><a href="#">بخارشو</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="sub-menu col-md-6 mb-3">
+                                            <a href="#">شست‌وشوی لباس</a>
+                                            <div class="sub-menu-items">
+                                            <div class="s-b-item"><a href="#">ماشین لباسشویی</a></div>
+                                            <div class="s-b-item"><a href="#">خشک‌کن لباس</a></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-content" id="accessories">
+                                        <a href="#"><i class="fa-solid fa-chevron-left"></i><span>همه لوازم جانبی</span></a>
+                                        <div class="sub-menus row">
+                                        <div class="sub-menu col-md-6 mb-3">
+                                            <a href="#">جانبی آشپزخانه</a>
+                                            <div class="sub-menu-items">
+                                            <div class="s-b-item"><a href="#">تیغه مخلوط‌کن</a></div>
+                                            <div class="s-b-item"><a href="#">فیلتر چای‌ساز</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="sub-menu col-md-6 mb-3">
+                                            <a href="#">جانبی نظافت</a>
+                                            <div class="sub-menu-items">
+                                            <div class="s-b-item"><a href="#">کیسه جاروبرقی</a></div>
+                                            <div class="s-b-item"><a href="#">فیلتر بخارشو</a></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-content" id="climate">
+                                        <a href="#"><i class="fa-solid fa-chevron-left"></i><span>وسایل تهویه و گرمایشی</span></a>
+                                        <p>انواع پنکه، بخاری برقی، هیتر، تصفیه هوا و رطوبت‌گیر در این بخش ارائه می‌شوند.</p>
+                                    </div>
+
+                                    <div class="p-content" id="personal-care">
+                                        <a href="#"><i class="fa-solid fa-chevron-left"></i><span>بهداشت و مراقبت شخصی</span></a>
+                                        <p>شامل سشوار، اتو مو، ماشین اصلاح، مسواک برقی و محصولات مشابه می‌باشد.</p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
                            
-                        </div>
+                        </nav>
                         <!-- Right Side -->
                         <div class="top-right">
                               <div class="user-login">
@@ -55,6 +158,7 @@
                                 <input type="text" placeholder="جستجو">
                             </div>
                         </div>
+                       
                         
                        
                     </div>
@@ -71,6 +175,21 @@
         </div>
        </div>
     </header>
+    <main>
+        <div class="baner-sec">
+            <div class="owl-carousel owl-theme" id="baner-owl">
+                <div class="baner-item">
+                    <img src="./images/slider1.png" alt="">
+                </div>
+                  <div class="baner-item">
+                    <img src="./images/slider1.png" alt="">
+                </div>
+                  <div class="baner-item">
+                    <img src="./images/slider1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
 
 
 
