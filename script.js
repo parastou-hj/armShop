@@ -135,4 +135,68 @@
     });
 
 
-     
+      $(document).ready(function(){
+            var articlesCarousel = $('#baner-owl').owlCarousel({
+                rtl: true,
+                loop: true,
+                margin: 10,
+                nav: false,
+                dots: true,
+                center: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                smartSpeed: 1000,
+                // stagePadding: 100,
+                responsive: {
+                    0: {
+                        items: 1.1,
+                        stagePadding: 100
+                    },
+                  
+                }
+            });
+            
+            // Custom Navigation
+            $('.carousel-prev').click(function() {
+                articlesCarousel.trigger('prev.owl.carousel');
+            });
+            
+            $('.carousel-next').click(function() {
+                articlesCarousel.trigger('next.owl.carousel');
+            });
+        });
+
+          $(document).ready(function(){
+            $('.product-carousel').owlCarousel({
+                rtl:true,
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                navText: ['‹', '›'],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 4
+                    }
+                }
+            });
+            
+            // کلیک روی دکمه اکشن
+            $('.action-btn').click(function(e) {
+                e.stopPropagation();
+                alert('محصول به سبد خرید اضافه شد!');
+            });
+        });

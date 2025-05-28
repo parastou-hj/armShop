@@ -210,7 +210,7 @@
             justify-content: space-between;
             cursor: pointer;
             border-bottom: 1px solid #cce5ff;
-            transition: background-color 0.2s ease; /* Smooth hover */
+            transition: background-color 0.2s ease; 
         }
         .p-tab:last-child {
             border-bottom: none;
@@ -223,10 +223,10 @@
             color:#000080;
             border-right: 3px solid var(--red);
             margin-right: -1px;
-            font-weight: bold; /* Make active tab text bold */
+            font-weight: bold; 
         }
         .p-tab.active span {
-            font-weight: bold; /* Ensure span is also bold */
+            font-weight: bold;
         }
          .p-tab.active .fa-chevron-left {
              color: var(--red);
@@ -242,18 +242,18 @@
             transition: color 0.2s ease;
         }
         .p-tab.active span {
-            color: #000080; /* Match active tab color */
+            color: #000080; 
         }
 
-        .p-tab .fa-fw { /* Style for FontAwesome fixed-width icons */
-            width: 20px; /* Ensure icons align */
+        .p-tab .fa-fw { 
+            width: 20px;
             text-align: center;
             opacity: 0.7;
              transition: opacity 0.2s ease;
         }
         .p-tab.active .fa-fw {
              opacity: 1;
-             color: #000080; /* Icon color when active */
+             color: #000080; 
         }
 
         .p-tab i.fa-chevron-left {
@@ -262,14 +262,13 @@
              transition: color 0.2s ease;
         }
 
-        /* --- Content Panes --- */
         .pro-contents {
             width: 70%;
             background-color: #fff;
             height: 100%;
             max-height: 100%;
             overflow-y: auto;
-            padding: 20px; /* Increased padding */
+            padding: 20px; 
         }
         .p-content{
             display: none;
@@ -278,14 +277,14 @@
             display: block;
         }
 
-        .p-content > a:first-child { /* "All..." link */
+        .p-content > a:first-child { 
             display: flex;
             align-items: center;
             padding: 0 0 15px 0;
             color: #000080;
              font-weight: bold;
              border-bottom: 1px dashed #eee;
-             margin-bottom: 20px; /* Increased margin */
+             margin-bottom: 20px; 
              text-decoration: none;
         }
         .p-content > a:first-child:hover span {
@@ -296,23 +295,21 @@
         }
         .p-content > a:first-child i {
             font-size: 0.9em;
-            margin-left: 8px; /* Changed to margin-left for FaChevronLeft */
+            margin-left: 8px;
         }
 
-        /* --- Sub Menus --- */
         .sub-menus {
             font-size: 0.95em;
         }
-        /* Use Bootstrap's row/col for layout if available and preferred */
-        /* .sub-menus.d-flex { ... } */
+      
 
         .sub-menu {
-             margin-bottom: 25px; /* Spacing between sub-menu groups */
+             margin-bottom: 25px; 
         }
         .sub-menu:last-child {
              margin-bottom: 0;
         }
-        .sub-menu > a { /* Sub-menu group title */
+        .sub-menu > a { 
             font-size: 1em;
             font-weight: bold;
             padding-bottom: 5px;
@@ -335,11 +332,252 @@
             text-decoration: none;
             border-radius: 3px;
             font-size: 0.95em;
-            transition: background-color 0.2s ease, color 0.2s ease, padding-right 0.2s ease; /* Smooth hover */
+            transition: background-color 0.2s ease, color 0.2s ease, padding-right 0.2s ease; 
         }
         .s-b-item a:hover {
-            font-weight: normal; /* Remove bold on hover if not desired */
+            font-weight: normal; 
             color: #000080;
             background-color: #f8f9fa;
-            padding-right: 10px; /* Indent on hover */
+            padding-right: 10px;
+        }
+        .baner-item{
+            height: 500px;
+            transform: scale(0.90);
+        }
+        .baner-item img{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        .baner-sec{
+            background-color: var(--primary-color);
+        }
+
+         .baner-sec .owl-item.center .baner-item{
+            transform: scale(1);
+
+            
+        }
+        .products-sec{
+            background-color: var(--primary-color);
+        }
+        .pro-item{
+            width: 200px;
+            height: 170px;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .pro-circle{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            padding: 20px;
+        }
+        .pro-back{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+           
+        }
+        .pro-back img{
+             position: absolute;
+            bottom:  -1px;
+            width: 100%;
+            height: auto;
+            right: 0;
+
+        }
+
+         .product-card {
+            background: white;
+            border: 2px solid #ff6b35;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .product-code {
+            background: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .country-flag {
+            width: 35px;
+            height: 25px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .flag-spain {
+            background: linear-gradient(to bottom, #c60b1e 33%, #ffc400 33%, #ffc400 66%, #c60b1e 66%);
+        }
+        
+        .flag-germany {
+            background: linear-gradient(to bottom, #000 33%, #dd0000 33%, #dd0000 66%, #ffce00 66%);
+        }
+        
+        .flag-italy {
+            background: linear-gradient(to right, #009246 33%, #fff 33%, #fff 66%, #ce2b37 66%);
+        }
+        
+        .product-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            min-height: 180px;
+        }
+        
+        .product-image img {
+            max-width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+        
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-top: auto;
+        }
+        
+        .product-info {
+            flex: 1;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        
+        .product-price {
+            background: #ff6b35;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .card-action {
+            margin-right: 15px;
+        }
+        
+        .action-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(255, 107, 53, 0.3);
+        }
+        
+        .action-btn:hover {
+            background: #e55a2b;
+            transform: scale(1.1);
+        }
+        
+        .action-btn::after {
+            content: '◀';
+            font-size: 12px;
+        }
+        
+        /* Owl Carousel Custom Styles */
+        .owl-carousel .owl-nav {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .owl-carousel .owl-nav button {
+            background: #ff6b35 !important;
+            color: white !important;
+            border-radius: 50% !important;
+            width: 50px !important;
+            height: 50px !important;
+            margin: 0 10px !important;
+            font-size: 18px !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .owl-carousel .owl-nav button:hover {
+            background: #e55a2b !important;
+            transform: scale(1.1) !important;
+        }
+        
+        .owl-carousel .owl-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .owl-carousel .owl-dots .owl-dot {
+            width: 12px !important;
+            height: 12px !important;
+            margin: 0 5px !important;
+            background: #ddd !important;
+            border-radius: 50% !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .owl-carousel .owl-dots .owl-dot.active {
+            background: #ff6b35 !important;
+            transform: scale(1.3) !important;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .product-card {
+                margin: 5px;
+                padding: 15px;
+                min-height: 350px;
+            }
+            
+            .product-name {
+                font-size: 14px;
+            }
+            
+            .product-code {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
         }
