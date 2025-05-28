@@ -1,0 +1,164 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root{
+            --primary-color:hsl(219.81deg 100% 20.39%);
+            --blue:hsl(252.48deg 92.59% 26.47%);
+        }
+        @font-face {
+    font-family: IRANYekanWebLight;
+    src: url(./font/IRANYekanWebLight.ttf);
+  }
+  @font-face {
+    font-family: IRANYekanWebBold;
+    src: url(./font/IRANYekanWebBold.ttf);
+  }
+  @font-face {
+    font-family: IRANYekanWebExtraBlack;
+    src: url(./font/IRANYekanWebExtraBlack.ttf);
+  }
+  @font-face {
+    font-family: IRANYekanWebExtraBold;
+    src: url(./font/IRANYekanWebExtraBold.ttf);
+  }
+  @font-face {
+    font-family: IRANYekanWebMedium;
+    src: url(./font/IRANYekanWebMedium.ttf);
+  }
+  @font-face {
+   font-family: iranyekanwebregularfanum;
+    src: url(./font/iranyekanwebregularfanum.ttf);
+  }
+    @font-face {
+    font-family: 'نوت\ نستعلیق\ اردو';
+    src: url(./font/nataliq.ttf);
+  }
+
+        
+        body {
+            font-family: iranyekanwebregularfanum;
+            direction: rtl;
+            font-size: 15px;
+        }
+         .container-fluid .row{
+    max-width: 1678px;
+    margin: 0px auto;
+}
+
+        .header-container{
+            background-color: var(--primary-color);
+        }
+        
+        /* Top Header Bar */
+        .top-header {
+           
+            padding: 8px 0;
+            border-radius: 50px;
+            border: 1px solid rgba(233, 230, 230, 0.658);
+             background-color: hsl(220deg 25.23% 58.04%);
+
+        }
+        
+        .top-header-content {
+           background-color: var(--blue);
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        
+        .top-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .search-top {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+            background-color: hsl(252.48deg 80.54% 36.27%);
+             border-radius: 50px;
+             position: relative;
+        }
+        .search-top input{
+            background: transparent;
+            border: none;
+            width: 100%;
+            padding:15px 40px 15px 0px;
+            border-radius: 50px;
+      
+        }
+        .search-top input::placeholder{
+            color: #ac9ad3;
+        }
+        .search-top img{
+            position: absolute;
+            right: 10px;
+            top:50%;
+            transform: translateY(-50%);
+                }
+        .search-top input:focus{
+            border: none;
+            outline: none;
+        }
+        .dropdown-toggle {
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .user-login {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        
+        .top-left {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .top-menu {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+            margin: 0;
+            align-items: center;
+           
+        }
+        
+        .top-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+        }
+        
+        .top-menu a:hover {
+            color: #e3f2fd;
+        }
+        
+        .categories-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .top-menu li{
+            padding:20px 10px;
+        }
