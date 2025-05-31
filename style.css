@@ -935,3 +935,9 @@ margin-left: 15px;
     border-radius: 50%;
     padding: 20px;
 }
+.fixed{
+    position: fixed;
+    left: 10px;
+    bottom: 0px;
+    z-index: 1000;
+}
