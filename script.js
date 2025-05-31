@@ -171,7 +171,7 @@
             $('.product-carousel').owlCarousel({
                 rtl:true,
                 loop: true,
-                margin: 10,
+                margin: 5,
                 nav: true,
                 dots: true,
                 autoplay: true,
@@ -189,14 +189,10 @@
                         items: 3
                     },
                     1200: {
-                        items: 4
+                        items: 5
                     }
                 }
             });
             
-            // کلیک روی دکمه اکشن
-            $('.action-btn').click(function(e) {
-                e.stopPropagation();
-                alert('محصول به سبد خرید اضافه شد!');
-            });
+           
         });
