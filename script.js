@@ -173,7 +173,7 @@
                 loop: true,
                 margin: 5,
                 nav: true,
-                dots: true,
+                dots: false,
                 autoplay: true,
                 autoplayTimeout: 4000,
                 autoplayHoverPause: true,
@@ -196,3 +196,81 @@
             
            
         });
+
+         $(document).ready(function(){
+            $('.most-sale-carousel').owlCarousel({
+                rtl:true,
+                loop: true,
+                margin: 5,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                navText: ['‹', '›'],
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 5
+                    }
+                }
+            });
+            
+           
+        });
+
+
+        //---------------brands-make-carousel
+$(document).ready(function() {
+    const initializeOwlCarousel = () => {
+        const advantagesContainer=$('.brand-items')
+        if (window.innerWidth > 768) {
+            if (typeof advantagesContainer.data('owl.carousel') != 'undefined') {
+                advantagesContainer.data('owl.carousel').destroy();
+              }
+              advantagesContainer.removeClass('owl-carousel');
+            
+        } else if(window.innerWidth <= 768) {
+            if (!$('.brand-items').hasClass('owl-carousel')) {
+                $('.brand-items').addClass('owl-carousel').owlCarousel({
+                    rtl: true,
+                    items: 1,
+                    
+                    dots: true,
+                    loop: true,
+                    // autoplay: true,
+                    // autoplayTimeout: 3000,
+                    // autoplayHoverPause: true,
+                    responsive: {
+                        0: {
+                            items: 3
+                        },
+                        576: {
+                            items: 4
+                        },
+                        768: {
+                            items: 5
+                        },
+                        1200: {
+                            items: 6
+                        },
+                        
+                    }
+                });
+            }
+        }
+    };
+
+    initializeOwlCarousel();
+    $(window).resize(initializeOwlCarousel);
+
+  
+});
