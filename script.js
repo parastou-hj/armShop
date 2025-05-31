@@ -1,3 +1,22 @@
+  
+  $(document).ready(function(){
+    function resize(){   
+        var calculatePadding = parseInt($('.header-container').css("height"));
+        
+            $(".body-content").css({
+                "padding-top": calculatePadding + "px"
+            });
+        
+    }
+
+    resize(); 
+    $(window).resize(function(){ 
+        resize();
+    });
+});
+
+  
+  
   document.addEventListener('DOMContentLoaded', () => {
         const megaMenuTriggers = document.querySelectorAll('.has-megamenu');
         const allMegaMenus = document.querySelectorAll('.mega-menu');
@@ -273,4 +292,42 @@ $(document).ready(function() {
     $(window).resize(initializeOwlCarousel);
 
   
+});
+
+ function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+
+        $(document).ready(function() {
+    const $logo = $('.col-lg-2 img');
+    const $header = $('.header-container');
+    let isScrolled = false;
+
+    $(window).scroll(function() {
+        const scrollTop = $(this).scrollTop();
+        
+        if (scrollTop > 50) {
+            if (!isScrolled) {
+                $logo.css({
+                    'height': '90px',
+                    'width': 'auto'
+                });
+                $header.addClass('scrolled');
+                isScrolled = true;
+            }
+        } else {
+            if (isScrolled) {
+                $logo.css({
+                    'height': '',
+                    'width': ''
+                });
+                $header.removeClass('scrolled');
+                isScrolled = false;
+            }
+        }
+    });
 });

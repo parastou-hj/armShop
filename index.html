@@ -9,14 +9,14 @@
         <script src="https://kit.fontawesome.com/f595c78486.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./style.css">
-    <!-- <link rel="stylesheet" href="./query.css"> -->
+    <link rel="stylesheet" href="./style2.css">
     <title>آرم گروپ </title>
 </head>
 <body>
-      <header class="header-container py-4">
+      <header class="header-container py-2">
        <div class="container-fluid px-0">
-        <div class="row col-xl-11">
-            <div class="col-lg-10">
+        <div class="row col-xxl-11 align-items-center">
+            <div class="col-xl-10 col-lg-11 ">
                  <div class="top-header py-2">
                 <div class="container-fluid">
                     <div class="top-header-content position-relative">
@@ -166,7 +166,7 @@
              </div>
              
             </div>
-            <div class="col-lg-2 d-flex justify-content-center">
+            <div class="col-xl-2  col-lg-1 d-flex justify-content-center header-logo">
                 <a href="#">
                     <img src="./images/logo.png" alt="">
                 </a>
@@ -175,8 +175,9 @@
         </div>
        </div>
     </header>
-    <main>
-        <div class="baner-sec py-2">
+    <main class="body-content">
+       <div class="baner-pros">
+         <div class="baner-sec py-2">
             <div class="owl-carousel owl-theme" id="baner-owl">
                 <div class="baner-item">
                     <img src="./images/slider1.png" alt="">
@@ -189,8 +190,9 @@
                 </div>
             </div>
         </div>
-        <section class="products-sec py-5">
-            <div class="container-fluid px-0">
+        <section class="products-sec">
+       
+            <div class="container-fluid px-0 pros">
                 <div class="row">
                     <div class=" col-xl-7 mx-auto d-flex justify-content-between">
                     <div class="">
@@ -229,7 +231,13 @@
                 </div>
             </div>
         </section>
-        <div class="sale-sec my-5">
+        <div class="down">
+            <a href="#sale-sec">
+                <img src="./images/flesh-down-sale.png" alt="">
+            </a>
+        </div>
+       </div>
+        <div class="sale-sec my-5" id="sale-sec">
              <div class="container-fluid px-0">
        <div class="row col-xl-11">
         <div class="sale-pic d-flex justify-content-center">
@@ -1153,7 +1161,7 @@
                    </div>
                 </div>
                 <div class="col-1 up d-flex justify-content-center align-items-center" >
-                   <div class="up-img">
+                   <div class="up-img" onclick="scrollToTop()">
                      <img src="./images/top.png" alt="">
                    </div>
                 </div>
