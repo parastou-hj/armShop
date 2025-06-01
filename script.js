@@ -538,4 +538,14 @@ $(document).ready(function() {
 
   
 });
-       
+ $('.user-login').on('mouseenter',function(){
+    $('.user-menu').addClass('active'); 
+  })
+
+   $('body').on('mouseover',function(e){
+    if(!e.target.closest('.user-login')){
+    $('.user-menu').removeClass('active');
+    // $('.cart-menu-container').removeClass('active');
+    }
+  })
+

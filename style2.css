@@ -130,7 +130,7 @@
         margin:100px 10px;
     }
     .search-top{
-        width: 250px;
+        width: 210px;
     }
     .footer-logo-sec{
         width: 50% !important;
@@ -164,6 +164,28 @@
    }
    .catalog-img{
     width: 180px;
+   }
+   .sale-pic img{
+    width: 50%;
+   }
+   .sale-carousel-sec{
+    margin-top: 20px;
+   }
+   .product-card{
+    min-height: 300px;
+    height: 300px;
+   }
+   .product-image{
+    min-height: 140px;
+    max-height: 140px;
+    height: 140px;
+    margin: 10px 0px;
+   }
+   .title-sec h3{
+    font-size: 1.2em;
+   }
+   .title-sec a{
+    padding: 10px;
    }
 
 }

@@ -104,6 +104,7 @@
                                             <div class="s-b-item"><a href="#">خشک‌کن لباس</a></div>
                                             </div>
                                         </div>
+                                        
                                         </div>
                                     </div>
 
@@ -144,16 +145,134 @@
                         </nav>
                         <!-- Right Side -->
                         <div class="top-right">
-                              <div class="user-login">
+                              <div class="user-login" id="userDropdown">
                                 <span>ورود /</span>
                                 <span class="text-white">ثبت نام</span>
                                 <img src="./images/user.png" alt="">
                                 <span>|</span>
+                                 <div class="user-menu">
+                                <div class="user-header">
+                                    <div class="user-avatar">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="user-info">
+                                        <div class="user-name">حساب کاربری</div>
+                                        <div class="user-subtitle">نام کاربر</div>
+                                    </div>
+                                </div>
+                        
+                                <a href="#" class="menu-item">
+                                    <i class="fa fa-user-pen"></i>
+                                    <span>ویرایش مشخصات فردی</span>
+                                </a>
+                        
+                                <div class="wallet-item">
+                                    <div class="wallet-info">
+                                        <i class="fa fa-wallet wallet-icon"></i>
+                                        <span>کیف پول</span>
+                                    </div>
+                                    <span class="wallet-amount">۰ تومان</span>
+                                </div>
+                        
+                                <a href="#" class="menu-item">
+                                    <i class="fa fa-heart"></i>
+                                    <span>لیست علاقه‌مندی</span>
+                                </a>
+                        
+                                <a href="#" class="menu-item">
+                                    <i class="fa fa-box"></i>
+                                    <span>سفارش‌های من</span>
+                                </a>
+                        
+                                <a href="#" class="menu-item logout">
+                                    <i class="fa fa-right-from-bracket"></i>
+                                    <span>خروج از حساب کاربری</span>
+                                </a>
+                              </div>
                             </div>
                            
-                            <div class="cart">
-                                <img src="./images/cart.png" alt="">
-                            </div>
+                           <div class="cart">
+    <img src="./images/cart.png" alt="سبد خرید">
+    <span class="cart-badge">3</span>
+    
+    <!-- Cart Dropdown -->
+    <div class="cart-dropdown">
+        <div class="cart-header">
+            <h4><i class="fas fa-shopping-cart"></i> سبد خرید شما</h4>
+            <p class="cart-count">3 محصول در سبد خرید</p>
+        </div>
+        
+        <div class="cart-items">
+            <!-- Cart Item 1 -->
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <img src="./images/sale1.png" alt="محصول">
+                </div>
+                <div class="cart-item-details">
+                    <div class="cart-item-name">آب پاش بالا ظرفشویی ال جی</div>
+                    <div class="cart-item-info">
+                        <span class="cart-item-quantity">تعداد: 1</span>
+                        <span class="cart-item-price">5,600,000 تومان</span>
+                    </div>
+                </div>
+                <button class="cart-item-remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Cart Item 2 -->
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <img src="./images/sale2.png" alt="محصول">
+                </div>
+                <div class="cart-item-details">
+                    <div class="cart-item-name">ماشین لباسشویی سامسونگ</div>
+                    <div class="cart-item-info">
+                        <span class="cart-item-quantity">تعداد: 1</span>
+                        <span class="cart-item-price">8,500,000 تومان</span>
+                    </div>
+                </div>
+                <button class="cart-item-remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Cart Item 3 -->
+            <div class="cart-item">
+                <div class="cart-item-image">
+                    <img src="./images/sale3.png" alt="محصول">
+                </div>
+                <div class="cart-item-details">
+                    <div class="cart-item-name">یخچال فریزر دوو</div>
+                    <div class="cart-item-info">
+                        <span class="cart-item-quantity">تعداد: 1</span>
+                        <span class="cart-item-price">12,300,000 تومان</span>
+                    </div>
+                </div>
+                <button class="cart-item-remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>مجموع:</span>
+                <span>26,400,000 تومان</span>
+            </div>
+            <div class="cart-buttons">
+                <a href="#" class="cart-btn view-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    مشاهده سبد
+                </a>
+                <a href="#" class="cart-btn checkout">
+                    <i class="fas fa-credit-card"></i>
+                    تسویه حساب
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
                           
                              <div class="search-top">
                                 <img src="./images/search.png" alt="">
@@ -1245,7 +1364,7 @@
                 </div>
                </div>
             </div>
-            <div class="row col-xl-11 footer-middle d-flex py-5 mt-5">
+            <div class="row col-xl-11 footer-middle d-flex py-5 ">
                 <div class=" catalog ">
                     <img src="./images/catalog-back.png" alt="" class="catalg-back">
                     <img src="./images/footer-catalog.png" alt="" class="catalog-img">
@@ -1311,8 +1430,12 @@
                 </div>
             </div>
             <div class="fixed d-flex flex-column">
-                <img src="./images/fix-whats.png" alt="">
-                <img src="./images/fix-chat.png" alt="">
+                <a href="#">
+                    <img src="./images/fix-whats.png" alt="">
+                </a>
+               <a href="#">
+                 <img src="./images/fix-chat.png" alt="">
+               </a>
             </div>
         </div>
     </footer>
