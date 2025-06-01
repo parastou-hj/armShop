@@ -187,7 +187,7 @@
         });
 
           $(document).ready(function(){
-            $('.product-carousel').owlCarousel({
+            $('#product-carousel').owlCarousel({
                 rtl:true,
                 loop: true,
                 margin: 5,
@@ -217,7 +217,7 @@
         });
 
          $(document).ready(function(){
-            $('.most-sale-carousel').owlCarousel({
+            $('#most-sale-carousel').owlCarousel({
                 rtl:true,
                 loop: true,
                 margin: 5,
@@ -331,3 +331,157 @@ $(document).ready(function() {
         }
     });
 });
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+            const mobileSideMenu = document.getElementById('mobileSideMenu');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const body = document.body;
+
+            // Function to open mobile menu
+            function openMobileMenu() {
+                mobileSideMenu.classList.add('active');
+                mobileMenuOverlay.classList.add('active');
+                body.classList.add('menu-open');
+            }
+
+            // Function to close mobile menu
+            function closeMobileMenu() {
+                mobileSideMenu.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+
+            // Event listeners
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', openMobileMenu);
+            }
+
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', closeMobileMenu);
+            }
+
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+            }
+
+            // Handle submenu toggles
+            const submenuToggles = document.querySelectorAll('.mobile-menu-item.has-submenu > button');
+            submenuToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const parentItem = this.parentElement;
+                    const submenu = parentItem.querySelector('.mobile-submenu');
+                    
+                    // Close other submenus
+                    submenuToggles.forEach(otherToggle => {
+                        if (otherToggle !== this) {
+                            const otherParent = otherToggle.parentElement;
+                            const otherSubmenu = otherParent.querySelector('.mobile-submenu');
+                            otherParent.classList.remove('active');
+                            otherSubmenu.classList.remove('active');
+                            
+                            // بستن تمام category items در سایر submenus
+                            const otherCategoryButtons = otherParent.querySelectorAll('.mobile-submenu-category');
+                            const otherCategoryItems = otherParent.querySelectorAll('.mobile-category-items');
+                            otherCategoryButtons.forEach(btn => btn.classList.remove('active'));
+                            otherCategoryItems.forEach(item => item.classList.remove('active'));
+                        }
+                    });
+
+                    // Toggle current submenu
+                    parentItem.classList.toggle('active');
+                    submenu.classList.toggle('active');
+                    
+                    // اگر submenu بسته شد، تمام category items را هم ببند
+                    if (!submenu.classList.contains('active')) {
+                        const categoryButtons = parentItem.querySelectorAll('.mobile-submenu-category');
+                        const categoryItems = parentItem.querySelectorAll('.mobile-category-items');
+                        categoryButtons.forEach(btn => btn.classList.remove('active'));
+                        categoryItems.forEach(item => item.classList.remove('active'));
+                    }
+                });
+            });
+
+            // Handle category accordion toggles
+            const categoryToggles = document.querySelectorAll('.mobile-submenu-category');
+            categoryToggles.forEach(categoryButton => {
+                categoryButton.addEventListener('click', function(e) {
+                    e.stopPropagation(); // جلوگیری از بسته شدن submenu
+                    
+                    const categoryItems = this.nextElementSibling;
+                    
+                    // بستن سایر category items در همان submenu
+                    const siblingCategories = this.closest('.mobile-submenu').querySelectorAll('.mobile-submenu-category');
+                    const siblingCategoryItems = this.closest('.mobile-submenu').querySelectorAll('.mobile-category-items');
+                    
+                    siblingCategories.forEach(category => {
+                        if (category !== this) {
+                            category.classList.remove('active');
+                        }
+                    });
+                    
+                    siblingCategoryItems.forEach(items => {
+                        if (items !== categoryItems) {
+                            items.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current category
+                    this.classList.toggle('active');
+                    categoryItems.classList.toggle('active');
+                });
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeMobileMenu();
+                }
+            });
+
+            // Handle mobile search
+            const mobileSearchBtn = document.querySelector('.mobile-search-btn');
+            const mobileSearchInput = document.querySelector('.mobile-search input');
+
+            if (mobileSearchBtn && mobileSearchInput) {
+                mobileSearchBtn.addEventListener('click', function() {
+                    const searchTerm = mobileSearchInput.value.trim();
+                    if (searchTerm) {
+                        // Add your search functionality here
+                        console.log('جستجو برای:', searchTerm);
+                        closeMobileMenu();
+                    }
+                });
+
+                mobileSearchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        mobileSearchBtn.click();
+                    }
+                });
+            }
+
+            // Prevent menu content clicks from closing the menu
+            mobileSideMenu.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+
+        // Integration with existing header resize function
+        $(document).ready(function(){
+            function resize(){   
+                var calculatePadding = parseInt($('.header-container').css("height"));
+                
+                $(".body-content").css({
+                    "padding-top": calculatePadding + "px"
+                });
+            }
+
+            resize(); 
+            $(window).resize(function(){ 
+                resize();
+            });
+        });

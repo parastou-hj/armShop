@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
         <script src="https://kit.fontawesome.com/f595c78486.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./style2.css">
     <title>آرم گروپ </title>
@@ -16,10 +15,13 @@
       <header class="header-container py-2">
        <div class="container-fluid px-0">
         <div class="row col-xxl-11 align-items-center">
-            <div class="col-xl-10 col-lg-11 ">
-                 <div class="top-header py-2">
-                <div class="container-fluid">
+            <div class="col-xl-10 col-lg-11 col-10">
+                 <div class="top-header px-xl-2">
+                <div class="container-fluid px-0">
                     <div class="top-header-content position-relative">
+                         <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
                          <!-- Left Side -->
                         <nav class=" top-left position-relative">
                             <ul class="top-menu">
@@ -166,7 +168,7 @@
              </div>
              
             </div>
-            <div class="col-xl-2  col-lg-1 d-flex justify-content-center header-logo">
+            <div class="col-xl-2  col-lg-1 col-2 d-flex justify-content-end justify-content-lg-center header-logo">
                 <a href="#">
                     <img src="./images/logo.png" alt="">
                 </a>
@@ -174,6 +176,138 @@
 
         </div>
        </div>
+       <!-- Mobile Side Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Side Menu -->
+    <div class="mobile-side-menu" id="mobileSideMenu">
+        <!-- Menu Header -->
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-logo">
+                <img src="./images/logo.png" alt="آرم گروپ">
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="mobile-menu-content">
+            <!-- Categories Menu -->
+            <div class="mobile-menu-item has-submenu">
+                <button type="button">
+                    <span><i class="fas fa-th-large" style="margin-left: 10px;"></i>دسته بندی محصولات</span>
+                </button>
+                <div class="mobile-submenu">
+                    <!-- Kitchen -->
+                    <div class="mobile-category-wrapper">
+                        <button class="mobile-submenu-category" type="button">
+                            <span><i class="fa-solid fa-blender" style="margin-left: 8px;"></i>آشپزخانه</span>
+                        </button>
+                        <div class="mobile-category-items">
+                            <div class="mobile-submenu-item"><a href="#">همه محصولات آشپزخانه</a></div>
+                            <div class="mobile-submenu-item"><a href="#">مایکروویو</a></div>
+                            <div class="mobile-submenu-item"><a href="#">سرخ‌کن</a></div>
+                            <div class="mobile-submenu-item"><a href="#">آون توستر</a></div>
+                            <div class="mobile-submenu-item"><a href="#">چای‌ساز</a></div>
+                            <div class="mobile-submenu-item"><a href="#">قهوه‌ساز</a></div>
+                            <div class="mobile-submenu-item"><a href="#">کتری برقی</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Cleaning -->
+                    <div class="mobile-category-wrapper">
+                        <button class="mobile-submenu-category" type="button">
+                            <span><i class="fa-solid fa-broom" style="margin-left: 8px;"></i>نظافت و شست‌وشو</span>
+                        </button>
+                        <div class="mobile-category-items">
+                            <div class="mobile-submenu-item"><a href="#">همه وسایل نظافت</a></div>
+                            <div class="mobile-submenu-item"><a href="#">جاروبرقی</a></div>
+                            <div class="mobile-submenu-item"><a href="#">جارو شارژی</a></div>
+                            <div class="mobile-submenu-item"><a href="#">بخارشو</a></div>
+                            <div class="mobile-submenu-item"><a href="#">ماشین لباسشویی</a></div>
+                            <div class="mobile-submenu-item"><a href="#">خشک‌کن لباس</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Accessories -->
+                    <div class="mobile-category-wrapper">
+                        <button class="mobile-submenu-category" type="button">
+                            <span><i class="fa-solid fa-plug-circle-bolt" style="margin-left: 8px;"></i>لوازم جانبی</span>
+                        </button>
+                        <div class="mobile-category-items">
+                            <div class="mobile-submenu-item"><a href="#">همه لوازم جانبی</a></div>
+                            <div class="mobile-submenu-item"><a href="#">تیغه مخلوط‌کن</a></div>
+                            <div class="mobile-submenu-item"><a href="#">فیلتر چای‌ساز</a></div>
+                            <div class="mobile-submenu-item"><a href="#">کیسه جاروبرقی</a></div>
+                            <div class="mobile-submenu-item"><a href="#">فیلتر بخارشو</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Climate -->
+                    <div class="mobile-category-wrapper">
+                        <button class="mobile-submenu-category" type="button">
+                            <span><i class="fa-solid fa-fan" style="margin-left: 8px;"></i>تهویه و گرمایش</span>
+                        </button>
+                        <div class="mobile-category-items">
+                            <div class="mobile-submenu-item"><a href="#">همه وسایل تهویه و گرمایش</a></div>
+                            <div class="mobile-submenu-item"><a href="#">پنکه</a></div>
+                            <div class="mobile-submenu-item"><a href="#">بخاری برقی</a></div>
+                            <div class="mobile-submenu-item"><a href="#">هیتر</a></div>
+                            <div class="mobile-submenu-item"><a href="#">تصفیه هوا</a></div>
+                            <div class="mobile-submenu-item"><a href="#">رطوبت‌گیر</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Care -->
+                    <div class="mobile-category-wrapper">
+                        <button class="mobile-submenu-category" type="button">
+                            <span><i class="fa-solid fa-hands-bubbles" style="margin-left: 8px;"></i>بهداشت و مراقبت شخصی</span>
+                        </button>
+                        <div class="mobile-category-items">
+                            <div class="mobile-submenu-item"><a href="#">همه محصولات بهداشتی</a></div>
+                            <div class="mobile-submenu-item"><a href="#">سشوار</a></div>
+                            <div class="mobile-submenu-item"><a href="#">اتو مو</a></div>
+                            <div class="mobile-submenu-item"><a href="#">ماشین اصلاح</a></div>
+                            <div class="mobile-submenu-item"><a href="#">مسواک برقی</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regular Menu Items -->
+            <div class="mobile-menu-item">
+                <a href="#">درباره ما</a>
+            </div>
+            <div class="mobile-menu-item">
+                <a href="#">کاتالوگ</a>
+            </div>
+            <div class="mobile-menu-item">
+                <a href="#">تماس با ما</a>
+            </div>
+            <div class="mobile-menu-item">
+                <a href="#">وبلاگ</a>
+            </div>
+            <div class="mobile-menu-item">
+                <a href="#">سوالات متداول</a>
+            </div>
+        </div>
+
+        <!-- Menu Actions -->
+        <div class="mobile-menu-actions">
+            <a href="#" class="mobile-login-btn">
+                <i class="fas fa-user"></i>
+                <span>ورود / ثبت نام</span>
+            </a>
+            
+            <div class="mobile-search">
+                <input type="text" placeholder="جستجو در محصولات...">
+                <button class="mobile-search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
     </header>
     <main class="body-content">
        <div class="baner-pros">
@@ -199,7 +333,7 @@
                         <div class="pro-item">
                             <div class="pro-circle"></div>
                             <div class="pro-back">
-                                <img src="./images/lundry.png" alt="">
+                                <img src="./images/Layer 1050.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -207,7 +341,7 @@
                         <div class="pro-item">
                             <div class="pro-circle"></div>
                             <div class="pro-back">
-                                <img src="./images/lundry2.png" alt="">
+                                <img src="./images/Layer 578.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -215,7 +349,7 @@
                         <div class="pro-item">
                             <div class="pro-circle"></div>
                             <div class="pro-back">
-                                <img src="./images/dishes.png" alt="">
+                                <img src="./images/Layer 1051.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -223,7 +357,7 @@
                         <div class="pro-item">
                             <div class="pro-circle"></div>
                             <div class="pro-back">
-                                <img src="./images/fridge.png" alt="">
+                                <img src="./images/Layer 1052.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -245,7 +379,7 @@
         </div>
         
         <div class="sale-carousel-sec">
-             <div class="owl-carousel owl-theme product-carousel">
+             <div class="owl-carousel owl-theme " id="product-carousel">
             <div class="product-card position-relative">
                 <div class="card-front">
                     <div class="card-header">
@@ -456,7 +590,7 @@
                     </a>
                 </div>
                 
-             <div class="owl-carousel owl-theme most-sale-carousel my-5">
+             <div class="owl-carousel owl-theme my-5" id="most-sale-carousel">
             <div class="product-card position-relative">
                <a href="#">
                  <div class="card-front">
@@ -666,9 +800,7 @@
          <div class="top-brands container-fluid mt-5 px-0 py-4">
             
             <div class="row col-xl-11 main-row">
-                <div class="brand-title mb-4">
-                    <span>برندهای برتر</span>
-                </div>
+               
                 <div class="brand-items">
                     <div class="p-1">
                         <div class="brand-box">
@@ -769,7 +901,7 @@
                     </a>
                 </div>
                 
-             <div class="owl-carousel owl-theme most-sale-carousel my-5">
+             <div class="owl-carousel owl-theme  my-5" id="most-sale-carousel">
             <div class="product-card position-relative">
                <a href="#">
                  <div class="card-front">
