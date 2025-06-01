@@ -114,7 +114,6 @@
 
             menu.addEventListener('mouseleave', () => {
                 hoverTimeout = setTimeout(() => {
-                    // Use activeTriggerLi to check if mouse moved back to trigger
                     if (activeTriggerLi && !activeTriggerLi.matches(':hover')) {
                         closeAllMegaMenus(true);
                     }
@@ -122,7 +121,6 @@
                 }, 250);
             });
 
-            // Tab switching logic inside each menu
             const megaMenuTabs = menu.querySelectorAll('.pro-tabs > .p-tab');
             megaMenuTabs.forEach(tab => {
                 tab.addEventListener('mouseenter', function() {
@@ -145,7 +143,6 @@
             });
         });
 
-        // Close menu on click outside
         document.addEventListener('click', function(event) {
             if (activeMenu && !activeMenu.contains(event.target) && activeTriggerLi && !activeTriggerLi.contains(event.target)) {
                 closeAllMegaMenus(true);
@@ -320,7 +317,7 @@ $(document).ready(function() {
 
 
         $(document).ready(function() {
-    const $logo = $('.col-lg-2 img');
+    const $logo = $('.header-logo img');
     const $header = $('.header-container');
     let isScrolled = false;
 
@@ -523,7 +520,7 @@ $(document).ready(function() {
                             items: 3.1
                         },
                          992: {
-                            items: 3.5
+                            items: 3.1
                         },
                        
                         

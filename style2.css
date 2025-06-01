@@ -1,3 +1,11 @@
+@media screen and (max-width: 1470px){
+    .top-menu li{
+        padding:15px 5px;
+    }
+    .search-top input{
+        padding: 10px 40px 10px 0px;
+    }
+}
 @media screen and (max-width: 1300px){
    .top-header-content{
     padding:0
@@ -22,15 +30,16 @@
            background-size: contain;
            min-height: 750px;
         }
+    
 }
 @media screen and (max-width: 1200px){
     .product-image img{
         height: 100%;
     }
-}
-
-@media screen and (max-width: 992px){
-    .catalog{
+    .baner-pros{
+        background-size: cover;
+    }
+       .catalog{
         width: 50%;
     }
     .footer-nav{
@@ -43,6 +52,10 @@
     .e-namads img{
         margin: 0px 20px;
     }
+}
+
+@media screen and (max-width: 992px){
+ 
     .footer-top{
    
     flex-direction: column;
@@ -54,7 +67,7 @@
 .footer-logo-sec{
     position: absolute;
     top: 0;
-    right: 68%;
+    right: 61%;
 }
 
 .footer-logo img{
@@ -86,6 +99,12 @@
            background-size: cover;
            min-height: 770px;
         }
+        .footer-middle {
+    margin-top: 20px !important;
+}
+.catalog-txt{
+    right: 230px;
+}
 
 }
 @media screen and (max-width: 768px){
@@ -121,6 +140,15 @@
     }
 }
 @media screen and (max-width: 576px){
+    .header-logo img{
+        /* width: 100px; */
+    }
+    .search-top{
+        width: 0px;
+    }
+    .top-right{
+        gap: 5px;
+    }
      .pro-item{
         /* width: 40% !important; */
         margin:0px  10px;
@@ -129,9 +157,9 @@
     .pro-item:nth-child(3), .pro-item:nth-child(4){
         margin:100px 10px;
     }
-    .search-top{
+    /* .search-top{
         width: 210px;
-    }
+    } */
     .footer-logo-sec{
         width: 50% !important;
         right: 25%;
