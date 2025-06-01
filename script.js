@@ -169,6 +169,10 @@
                 // stagePadding: 100,
                 responsive: {
                     0: {
+                        items: 1,
+                        stagePadding:50
+                    },
+                     576: {
                         items: 1.1,
                         stagePadding: 100
                     },
@@ -199,15 +203,21 @@
                 navText: ['‹', '›'],
                 responsive: {
                     0: {
-                        items: 1
+                        items: 1.5
                     },
-                    600: {
+                     500: {
                         items: 2
                     },
-                    1000: {
+                    680: {
                         items: 3
                     },
-                    1200: {
+                    1000: {
+                        items: 3.5
+                    },
+                     1200: {
+                        items: 4.5
+                    },
+                    1350: {
                         items: 5
                     }
                 }
@@ -217,7 +227,7 @@
         });
 
          $(document).ready(function(){
-            $('#most-sale-carousel').owlCarousel({
+            $('.most-sale-carousel').owlCarousel({
                 rtl:true,
                 loop: true,
                 margin: 5,
@@ -227,17 +237,23 @@
                 autoplayTimeout: 4000,
                 autoplayHoverPause: true,
                 navText: ['‹', '›'],
-                responsive: {
+               responsive: {
                     0: {
-                        items: 1
+                        items: 1.5
                     },
-                    600: {
+                     500: {
                         items: 2
                     },
-                    1000: {
+                    680: {
                         items: 3
                     },
-                    1200: {
+                    1000: {
+                        items: 3.5
+                    },
+                     1200: {
+                        items: 4.5
+                    },
+                    1350: {
                         items: 5
                     }
                 }
@@ -245,6 +261,7 @@
             
            
         });
+          
 
 
         //---------------brands-make-carousel
@@ -342,21 +359,18 @@ $(document).ready(function() {
             const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
             const body = document.body;
 
-            // Function to open mobile menu
             function openMobileMenu() {
                 mobileSideMenu.classList.add('active');
                 mobileMenuOverlay.classList.add('active');
                 body.classList.add('menu-open');
             }
 
-            // Function to close mobile menu
             function closeMobileMenu() {
                 mobileSideMenu.classList.remove('active');
                 mobileMenuOverlay.classList.remove('active');
                 body.classList.remove('menu-open');
             }
 
-            // Event listeners
             if (mobileMenuToggle) {
                 mobileMenuToggle.addEventListener('click', openMobileMenu);
             }
@@ -369,14 +383,12 @@ $(document).ready(function() {
                 mobileMenuOverlay.addEventListener('click', closeMobileMenu);
             }
 
-            // Handle submenu toggles
             const submenuToggles = document.querySelectorAll('.mobile-menu-item.has-submenu > button');
             submenuToggles.forEach(toggle => {
                 toggle.addEventListener('click', function() {
                     const parentItem = this.parentElement;
                     const submenu = parentItem.querySelector('.mobile-submenu');
                     
-                    // Close other submenus
                     submenuToggles.forEach(otherToggle => {
                         if (otherToggle !== this) {
                             const otherParent = otherToggle.parentElement;
@@ -384,7 +396,6 @@ $(document).ready(function() {
                             otherParent.classList.remove('active');
                             otherSubmenu.classList.remove('active');
                             
-                            // بستن تمام category items در سایر submenus
                             const otherCategoryButtons = otherParent.querySelectorAll('.mobile-submenu-category');
                             const otherCategoryItems = otherParent.querySelectorAll('.mobile-category-items');
                             otherCategoryButtons.forEach(btn => btn.classList.remove('active'));
@@ -392,11 +403,9 @@ $(document).ready(function() {
                         }
                     });
 
-                    // Toggle current submenu
                     parentItem.classList.toggle('active');
                     submenu.classList.toggle('active');
                     
-                    // اگر submenu بسته شد، تمام category items را هم ببند
                     if (!submenu.classList.contains('active')) {
                         const categoryButtons = parentItem.querySelectorAll('.mobile-submenu-category');
                         const categoryItems = parentItem.querySelectorAll('.mobile-category-items');
@@ -406,15 +415,13 @@ $(document).ready(function() {
                 });
             });
 
-            // Handle category accordion toggles
             const categoryToggles = document.querySelectorAll('.mobile-submenu-category');
             categoryToggles.forEach(categoryButton => {
                 categoryButton.addEventListener('click', function(e) {
-                    e.stopPropagation(); // جلوگیری از بسته شدن submenu
+                    e.stopPropagation(); 
                     
                     const categoryItems = this.nextElementSibling;
                     
-                    // بستن سایر category items در همان submenu
                     const siblingCategories = this.closest('.mobile-submenu').querySelectorAll('.mobile-submenu-category');
                     const siblingCategoryItems = this.closest('.mobile-submenu').querySelectorAll('.mobile-category-items');
                     
@@ -430,20 +437,17 @@ $(document).ready(function() {
                         }
                     });
                     
-                    // Toggle current category
                     this.classList.toggle('active');
                     categoryItems.classList.toggle('active');
                 });
             });
 
-            // Close menu on escape key
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') {
                     closeMobileMenu();
                 }
             });
 
-            // Handle mobile search
             const mobileSearchBtn = document.querySelector('.mobile-search-btn');
             const mobileSearchInput = document.querySelector('.mobile-search input');
 
@@ -451,7 +455,6 @@ $(document).ready(function() {
                 mobileSearchBtn.addEventListener('click', function() {
                     const searchTerm = mobileSearchInput.value.trim();
                     if (searchTerm) {
-                        // Add your search functionality here
                         console.log('جستجو برای:', searchTerm);
                         closeMobileMenu();
                     }
@@ -464,24 +467,75 @@ $(document).ready(function() {
                 });
             }
 
-            // Prevent menu content clicks from closing the menu
             mobileSideMenu.addEventListener('click', function(e) {
                 e.stopPropagation();
             });
         });
 
-        // Integration with existing header resize function
-        $(document).ready(function(){
-            function resize(){   
-                var calculatePadding = parseInt($('.header-container').css("height"));
+        // $(document).ready(function(){
+        //     function resize(){   
+        //         var calculatePadding = parseInt($('.header-container').css("height"));
                 
-                $(".body-content").css({
-                    "padding-top": calculatePadding + "px"
+        //         $(".body-content").css({
+        //             "padding-top": calculatePadding + "px"
+        //         });
+        //     }
+
+        //     resize(); 
+        //     $(window).resize(function(){ 
+        //         resize();
+        //     });
+        // });
+
+
+
+        $(document).ready(function() {
+    const initializeOwlCarousel = () => {
+        const advantagesContainer=$('.blogs')
+        if (window.innerWidth > 1200) {
+            if (typeof advantagesContainer.data('owl.carousel') != 'undefined') {
+                advantagesContainer.data('owl.carousel').destroy();
+              }
+              advantagesContainer.removeClass('owl-carousel');
+            
+        } else if(window.innerWidth <= 1200) {
+            if (!$('.blogs').hasClass('owl-carousel')) {
+                $('.blogs').addClass('owl-carousel').owlCarousel({
+                    rtl: true,
+                    items: 1,
+                    
+                    dots: true,
+                    loop: true,
+                    // autoplay: true,
+                    // autoplayTimeout: 3000,
+                    // autoplayHoverPause: true,
+                    responsive: {
+                        0: {
+                            items: 1.2
+                        },
+                        576: {
+                            items: 1.5
+                        },
+                         700: {
+                            items: 2.5
+                        },
+                        800: {
+                            items: 3.1
+                        },
+                         992: {
+                            items: 3.5
+                        },
+                       
+                        
+                    }
                 });
             }
+        }
+    };
 
-            resize(); 
-            $(window).resize(function(){ 
-                resize();
-            });
-        });
+    initializeOwlCarousel();
+    $(window).resize(initializeOwlCarousel);
+
+  
+});
+       

@@ -483,8 +483,9 @@
             padding-right: 10px;
         }
         .baner-item{
-            height: 500px;
+            max-height: 460px;
             transform: scale(0.90);
+
         }
         .baner-item img{
             width: 100%;
@@ -494,6 +495,7 @@
         .baner-pros{
             background-image: url(./images/body-back-top.png);
             background-position: center;
+           background-size: contain;
             position: relative;
         }
         .down{
@@ -522,13 +524,13 @@
             
         }
         .baner-pros{
-            height: 991px;
+            min-height: 891px;
         }
       .pro-sec-back{
         width: 100%;
         height: 100%;
       }
-        .pro-item{
+        /* .pro-item{
             width: 200px;
             height: 170px;
             position: relative;
@@ -559,9 +561,132 @@
             height: auto;
             right: 0;
 
-        }
+        } */
 
-         .product-card {
+    
+.pro-item {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;   
+    margin: 0px 30px;
+    text-align: center;
+}
+.pro-item h2{
+    color: #fff;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.pro-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(233, 230, 230, 0.658);
+    background-color: hsl(220deg 25.23% 58.04%);
+    padding: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.pro-back::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    background-color: var(--blue); 
+    border: 5px solid #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.pro-back {
+    width: 100%;
+    position: relative;
+    /* top: -10%;
+    right: 0; */
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    z-index: 2; 
+  
+    
+}
+
+.pro-back img {
+    /* display: none; */
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    /* transform: translateY(30px); */
+    margin-bottom: 20px;
+    /* position: absolute;
+    bottom: 20px; */
+   
+    /* height: 250px; */
+    object-fit: fill;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateY(20px);
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+    z-index: 3;
+}
+
+.pro-item:hover .pro-back img {
+    /* transform: translateY(-20px); 
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3)); */
+}
+
+.pro-item:hover .pro-circle {
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    
+    .pro-circle {
+        padding: 6px;
+    }
+    
+    .pro-circle::before {
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+    }
+    
+    .pro-item:hover .pro-back img {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 480px) {
+    .pro-item {
+        width: 140px;
+        height: 120px;
+    }
+    
+    .pro-circle {
+        padding: 5px;
+    }
+    
+    .pro-circle::before {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+    }
+    
+    .pro-item:hover .pro-back img {
+        transform: translateY(-12px);
+    }
+}
+       
+       
+       
+       
+        .product-card {
             /* background: white; */
             border: 2px solid #ff6b35;
             border-radius: 15px;
@@ -596,7 +721,7 @@
             height: 25px;
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
         }
         
     
@@ -614,9 +739,9 @@
         }
         
         .product-image img {
-            /* width: 100%;
+            width: 100%;
             height: 100%;
-            object-fit: fill; */
+            object-fit: contain;
             
         }
         
@@ -662,7 +787,7 @@
             width: 100%;
         }
         
-        .product-carousel .owl-nav button {
+        #product-carousel .owl-nav button {
             background: #fff !important;
             color: var(--secondary-color) !important;
             border-radius: 50% !important;
@@ -674,7 +799,7 @@
             border: 1px solid var(--secondary-color) !important;
         }
         
-        .owl-carousel .owl-nav button:hover {
+       #product-carousel  .owl-nav button:hover {
             background: var(--secondary-color) !important;
             color: #fff !important;
             transform: scale(1.1) !important;
@@ -703,7 +828,7 @@
         @media (max-width: 768px) {
             .product-card {
                 margin: 5px;
-                padding: 15px;
+                /* padding: 15px; */
                 min-height: 350px;
             }
             
@@ -818,6 +943,9 @@
     font-size: 2em;
   font-family: IRANYekanWebExtraBold;
 }
+.most-sale-carousel{
+    position: relative;
+}
 
 .most-sale-carousel .product-card{
     border: none;
@@ -825,6 +953,10 @@
 .most-sale-carousel .card-back{
    background-color: var(--primary-color);
 }
+.most-sale-carousel  .owl-nav {
+          
+            width: 98% !important;
+        }
  .most-sale-carousel .owl-nav button {
             background: #fff !important;
             color: var(--primary-color) !important;
@@ -1068,6 +1200,19 @@ footer{
 footer a{
     color: #fff;
 }
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.footer-top >div{
+    width: 30%;
+}
+.footer-logo-sec{
+    position: absolute;
+    top: 0;
+    right: 35%;
+}
 .socials{
     /* width: 100%; */
 }
@@ -1152,12 +1297,15 @@ margin-left: 15px;
 .footer-rigths{
     font-size: .8em;
 }
-.rights{
+.rights-sec{
     background-color: hsl(253.01deg 93.46% 30%);
     padding: 20px 30px;
     border-radius: 25px;
     color: #d5d8db;
 
+}
+.rights{
+    width: 100%;
 }
 .company{
     font-size: 1.1em !important;
@@ -1172,10 +1320,11 @@ margin-left: 15px;
     padding: 20px;
     cursor: pointer;
 }
+
 .fixed{
     position: fixed;
-    left: 10px;
-    bottom: 0px;
+    left: 0px;
+    bottom: 90px;
     z-index: 1000;
 }
 .col-lg-2 img {
