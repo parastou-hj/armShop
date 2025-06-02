@@ -546,3 +546,40 @@ $(document).ready(function() {
     }
   })
 
+// $(document).ready(function() {
+//     const initializeOwlCarousel = () => {
+//         const advantagesContainer=$('.pros')
+//         if (window.innerWidth > 768) {
+//             if (typeof advantagesContainer.data('owl.carousel') != 'undefined') {
+//                 advantagesContainer.data('owl.carousel').destroy();
+//               }
+//               advantagesContainer.removeClass('owl-carousel');
+            
+//         } else if(window.innerWidth <= 768) {
+//             if (!$('.pros').hasClass('owl-carousel')) {
+//                 $('.pros').addClass('owl-carousel').owlCarousel({
+//                     rtl: true,
+//                     items: 1,
+                    
+//                     dots: true,
+//                     loop: true,
+//                     // autoplay: true,
+//                     // autoplayTimeout: 3000,
+//                     // autoplayHoverPause: true,
+//                     responsive: {
+//                         0: {
+//                             items: 1.2
+//                         },
+                       
+                        
+//                     }
+//                 });
+//             }
+//         }
+//     };
+
+//     initializeOwlCarousel();
+//     $(window).resize(initializeOwlCarousel);
+
+  
+// });
