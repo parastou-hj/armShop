@@ -2830,6 +2830,7 @@ margin-left: 15px;
 .wallet-info {
     display: flex;
     align-items: center;
+    color: var(--primary-color);
 }
 
 .wallet-amount {
@@ -3228,4 +3229,30 @@ margin-left: 15px;
         width: 40px ;
         height: 40px ;
     }
+}
+
+.pro-item{
+    position: relative;
+    /* width: 400px;
+    height: 400px; */
+
+}
+.pros-back{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 0;
+}
+.pro-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 12px;
+    right: 8px;
+    width:auto;
+    height: auto;
+    z-index: 1;
 }
