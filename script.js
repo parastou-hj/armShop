@@ -156,8 +156,9 @@
                 rtl: true,
                 loop: true,
                 margin: 10,
-                nav: false,
+                nav: true,
                 dots: true,
+                  navText: ['‹', '›'],
                 center: true,
                 autoplay: true,
                 autoplayTimeout: 5000,
@@ -167,12 +168,17 @@
                 responsive: {
                     0: {
                         items: 1,
-                        stagePadding:50
+                        // stagePadding:50
                     },
-                     576: {
+                    480: {
+                        items: 1,
+                        stagePadding:60
+                    },
+                     800: {
                         items: 1.1,
                         stagePadding: 100
                     },
+                    
                   
                 }
             });
@@ -546,40 +552,108 @@ $(document).ready(function() {
     }
   })
 
-// $(document).ready(function() {
-//     const initializeOwlCarousel = () => {
-//         const advantagesContainer=$('.pros')
-//         if (window.innerWidth > 768) {
-//             if (typeof advantagesContainer.data('owl.carousel') != 'undefined') {
-//                 advantagesContainer.data('owl.carousel').destroy();
-//               }
-//               advantagesContainer.removeClass('owl-carousel');
-            
-//         } else if(window.innerWidth <= 768) {
-//             if (!$('.pros').hasClass('owl-carousel')) {
-//                 $('.pros').addClass('owl-carousel').owlCarousel({
-//                     rtl: true,
-//                     items: 1,
-                    
-//                     dots: true,
-//                     loop: true,
-//                     // autoplay: true,
-//                     // autoplayTimeout: 3000,
-//                     // autoplayHoverPause: true,
-//                     responsive: {
-//                         0: {
-//                             items: 1.2
-//                         },
-                       
-                        
-//                     }
-//                 });
-//             }
-//         }
-//     };
+document.addEventListener('DOMContentLoaded', function() {
+    const saleImage = document.querySelector('.sale-pic img');
+    
+    function checkScroll() {
+        const elementTop = saleImage.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+            saleImage.classList.add('animate');
+        }
+    }
+    
+    window.addEventListener('scroll', checkScroll);
+    checkScroll();
+});
 
-//     initializeOwlCarousel();
-//     $(window).resize(initializeOwlCarousel);
 
-  
-// });
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.has-dropdown');
+    const dropdownMenu = document.querySelector('.simple-dropdown');
+    let hoverTimeout;
+
+    if (dropdown && dropdownMenu) {
+        // نمایش زیرمنو
+        dropdown.addEventListener('mouseenter', function() {
+            clearTimeout(hoverTimeout);
+            dropdownMenu.style.opacity = '1';
+            dropdownMenu.style.visibility = 'visible';
+            dropdownMenu.style.transform = 'translateY(0)';
+        });
+
+        // مخفی کردن زیرمنو
+        dropdown.addEventListener('mouseleave', function() {
+            hoverTimeout = setTimeout(() => {
+                if (!dropdownMenu.matches(':hover')) {
+                    dropdownMenu.style.opacity = '0';
+                    dropdownMenu.style.visibility = 'hidden';
+                    dropdownMenu.style.transform = 'translateY(-15px)';
+                }
+            }, 300);
+        });
+
+        // نگه داشتن زیرمنو باز
+        dropdownMenu.addEventListener('mouseenter', function() {
+            clearTimeout(hoverTimeout);
+        });
+
+        dropdownMenu.addEventListener('mouseleave', function() {
+            dropdownMenu.style.opacity = '0';
+            dropdownMenu.style.visibility = 'hidden';
+            dropdownMenu.style.transform = 'translateY(-15px)';
+        });
+
+        // بستن با کلیک خارج
+        document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target)) {
+                dropdownMenu.style.opacity = '0';
+                dropdownMenu.style.visibility = 'hidden';
+                dropdownMenu.style.transform = 'translateY(-15px)';
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchIcon = document.querySelector('.search-top img');
+    const mobileSearchBar = document.getElementById('mobileSearchBar');
+    const mobileSearchInput = document.getElementById('mobileSearchInput');
+
+    // باز/بسته کردن
+    searchIcon.addEventListener('click', function(e) {
+        if (window.innerWidth <= 992) {
+            e.preventDefault();
+            if (mobileSearchBar.style.display === 'block') {
+                mobileSearchBar.style.display = 'none';
+            } else {
+                mobileSearchBar.style.display = 'block';
+                mobileSearchInput.focus();
+            }
+        }
+    });
+
+    // بستن با کلیک خارج
+    document.addEventListener('click', function(e) {
+        if (!mobileSearchBar.contains(e.target) && !searchIcon.contains(e.target)) {
+            mobileSearchBar.style.display = 'none';
+        }
+    });
+
+    // جستجو با Enter
+    mobileSearchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performMobileSearch();
+        }
+    });
+});
+
+function performMobileSearch() {
+    const searchTerm = document.getElementById('mobileSearchInput').value.trim();
+    if (searchTerm) {
+        console.log('جستجو:', searchTerm);
+        // کد جستجو اینجا
+        document.getElementById('mobileSearchBar').style.display = 'none';
+    }
+}

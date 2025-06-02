@@ -30,7 +30,38 @@
                                     <span>دسته بندی محصولات</span>
                                     <img src="./images/flesh-down.png" alt="">
                                 </li>
-                                <li><a href="#">درباره ما</a></li>
+                                
+                                <li class="has-dropdown">
+                                    <a href="#" >
+                                        درباره ما
+                                        
+                                    </a>
+                                    
+                                    <div class="simple-dropdown">
+                                        <div class="dropdown-content">
+                                            <a href="#" class="dropdown-item">
+                                                <i class="fas fa-building"></i>
+                                                <span>معرفی شرکت</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <i class="fas fa-eye"></i>
+                                                <span>چشم‌انداز و ماموریت</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <i class="fas fa-users"></i>
+                                                <span>تیم مدیریت</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <i class="fas fa-history"></i>
+                                                <span>تاریخچه شرکت</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <i class="fas fa-award"></i>
+                                                <span>افتخارات و گواهینامه‌ها</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
                                  <li><a href="#">کاتالوگ</a></li>
                                  <li><a href="#">تماس با ما</a></li>
                                   <li><a href="#">وبلاگ</a></li>
@@ -143,7 +174,6 @@
 
                            
                         </nav>
-                        <!-- Right Side -->
                         <div class="top-right">
                               <div class="user-login" id="userDropdown">
                                 <span>ورود /</span>
@@ -292,6 +322,12 @@
             </div>
 
         </div>
+        <div class="mobile-search-bar" id="mobileSearchBar">
+    <input type="text" placeholder="جستجو در محصولات..." id="mobileSearchInput">
+    <button type="button" onclick="performMobileSearch()">
+        <i class="fas fa-search"></i>
+    </button>
+</div>
        </div>
        <!-- Mobile Side Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
@@ -425,7 +461,10 @@
             </div>
         </div>
     </div>
+         
+
     </header>
+
     <main class="body-content">
        <div class="baner-pros">
          <div class="baner-sec py-2">

@@ -202,8 +202,14 @@
         margin-top: 30px;
     }
     .baner-item{
-        height: 300px;
+        height: 280px;
     }
+    #baner-owl .owl-nav {
+   
+    bottom: 10px !important;
+    right: 5% !important;
+    z-index:2009!important;
+}
     .up-img{
         position: absolute;
         left: 10px;
